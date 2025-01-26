@@ -1,21 +1,16 @@
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
-        // Iterate through each element
         for (int i = 0; i < nums.length; i++) {
-            // Check subsequent elements
             for (int j = i + 1; j < nums.length; j++) {
-                // If a pair is found that adds up to the target
                 if (nums[i] + nums[j] == target) {
-                    return new int[] { i, j }; // Return their indices
+                    return new int[] { i, j }; 
                 }
             }
         }
-        // Throw an exception if no solution is found (per problem, won't happen)
-        throw new IllegalArgumentException("No solution found");
+        return new int[] {};
     }
 
     public static void main(String[] args) {
-        // Example usage
         int[] nums1 = {2, 7, 11, 15};
         int target1 = 9;
 
